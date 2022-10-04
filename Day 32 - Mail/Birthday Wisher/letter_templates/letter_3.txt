@@ -1,0 +1,7 @@
+Dear [NAME],
+
+It's your [YEAR] birthday! Have a great day!
+
+All my love,
+
+[SYSTEM_NAME]
