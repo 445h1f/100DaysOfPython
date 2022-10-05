@@ -1,0 +1,4 @@
+openweathermap.org asking money for One Call API.
+Cannot signup on Twilio.
+Watched everything and learnt API authentication, environment variables, etc.
+Will update this day with OTP Verfication Project when I'll be able to create account on Twilio.
