@@ -1,2 +1,0 @@
-Cannot create account on Twilio!
-Contacted their support. Hope they will resolve it ASAP!
