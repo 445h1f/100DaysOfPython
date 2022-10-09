@@ -1,5 +1,4 @@
 # importing twilio python library
-from operator import ge
 from twilio.rest import Client
 import os
 from dotenv import load_dotenv
