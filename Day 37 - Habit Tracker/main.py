@@ -59,15 +59,15 @@ date = today.strftime('%Y%m%d') #return in YYYYMMDD format
 # data to be added in my graph
 graphData = {
     'date': date, #yyyyMMdd format
-    'quantity': '180' #60 minutes
+    'quantity': str(float(input('Enter minutes: '))) #60 minutes
 }
 
 
 
 
 # making post request to add data to graph id
-# response = requests.post(url=myGraphEndpoint, json=graphData, headers=header)
-# print(response.text) #{"message":"Success.","isSuccess":true}
+response = requests.post(url=myGraphEndpoint, json=graphData, headers=header)
+print(response.text) #{"message":"Success.","isSuccess":true}
 
 
 # updating the existing pixel data
