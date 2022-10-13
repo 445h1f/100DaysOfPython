@@ -14,7 +14,7 @@ today = datetime.now()
 
 # checking if day is saturday from weekday method (0-Monday,....,5-Saturday,6-Sunday)
 weekDay = today.weekday()
-if weekDay == 3: #i.e. Saturday:
+if weekDay == 5: #i.e. Saturday:
 
     # picking random qoute from quotes list using choice method
     quote = random.choice(quotes)
