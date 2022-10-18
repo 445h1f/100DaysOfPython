@@ -1,10 +1,10 @@
 import random
-import hangmanArt
-import hangmanWords
+import hangman_art
+import hangman_words
 
-print(hangmanArt.logo)
+print(hangman_art.logo)
 
-wordList = hangmanWords.words
+wordList = hangman_words.words
 chosenWord = random.choice(wordList).lower()
 blankWordList = []
 for i in chosenWord:
@@ -15,7 +15,7 @@ gameOver = False
 leftLivesStrList = []
 guessedWords = []
 
-stages = hangmanArt.stages
+stages = hangman_art.stages
 
 lives = 6
 print(f'Game Started!\n')

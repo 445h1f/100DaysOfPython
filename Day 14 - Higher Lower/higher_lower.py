@@ -1,5 +1,4 @@
-from turtle import clearscreen
-from gameData import data
+from game_data import data
 from art import logo, vs
 from random import randint
 import os
@@ -15,7 +14,7 @@ def randomComparisonObject(previousIndex):
     # keeps generating random index while index is equal to preivous item index so that both comparison obhject will be different always
     while randomIndex == previousIndex:
         randomIndex = randint(0, len(data)-1)
-    
+
     # gets data item on that index
     randomObject = data[randomIndex]
 
@@ -42,7 +41,7 @@ def higherLowerStart():
     # variable to store user score
     userScore = 0
 
-    # generate a random index to get a random object from data to start. 
+    # generate a random index to get a random object from data to start.
     itemAIndex = randint(0, len(data)-1)
     # getting Item A details
     itemA = data[itemAIndex]
@@ -78,7 +77,7 @@ def higherLowerStart():
                 userScore += 1
             else:
                 gameOver = True
-        
+
         if gameOver:
             clearScreen()
             print(logo)

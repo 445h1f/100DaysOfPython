@@ -1,4 +1,4 @@
-from Art import logo
+from art import logo
 import random
 
 def playGame():
