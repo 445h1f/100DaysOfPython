@@ -37,20 +37,17 @@ def getGender(name):
 # defining response for home route!
 @app.route('/')
 def home():
-    return f"""<h1>Welcome to Guess Maker!</h1>
-    <h2>Enter your name in format /guess/&lt;name&gt to get results</h2>"""
+    return render_template('index.html')
 
 
 # response for guess router with name parameter
 @app.route('/guess/<name>')
-def guess(name):
+def makeGuess(name):
     """Respond back with predicted age and gender of entered name."""
     age = getAge(name)
     gender = getGender(name)
 
-    return render_template("index.html", name=name.title(), age=age, gender=gender)
-
-
+    return render_template("guess.html", name=name.title(), age=age, gender=gender)
 
 if __name__ == "__main__":
     app.run(debug=True)
