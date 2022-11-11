@@ -79,19 +79,19 @@ def contact():
         connection.sendmail(
             from_addr=EMAIL,
             to_addrs=SYSTEM_EMAIL,
-            msg=f'{emailSubject}\n\n{emailBody}'.encode('utf-8')
+            msg=f'Subject:{emailSubject}\n\n{emailBody}'.encode('utf-8')
         )
         print(f'Email sent to system!')
 
         # sending email to user for contact confirmation
         userEmailSubject = f'Thanks for Contacting {blogTitle}'
-        userEmailBody = f'We\'ve recieved your request and will revert back to you as soon as possible.\n\n Submitted Details: {emailBody}'
+        userEmailBody = f'We\'ve recieved your request and will revert back to you as soon as possible.\n\nSubmitted Details: \n{emailBody}'
 
         print(f'Sending email to submitted user email...')
         connection.sendmail(
             from_addr=EMAIL,
             to_addrs=email,
-            msg=f'{userEmailSubject}\n\n{userEmailBody}'.encode('utf-8')
+            msg=f'Subject:{userEmailSubject}\n\n{userEmailBody}'.encode('utf-8')
         )
         print(f'Email sent to user email!')
     else:
