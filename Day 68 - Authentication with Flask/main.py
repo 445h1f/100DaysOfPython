@@ -50,7 +50,7 @@ def register():
         hashedPassword = generate_password_hash(password=password, salt_length=32)
         newUser = User(
             name = request.form.get('name'),
-
+            email = email,
             password = hashedPassword
         )
         db.session.add(newUser)
